@@ -9,7 +9,7 @@ def caesar(sCode, addChar) :
     :return: 코드화 시킨 문자열
     """
     caesarCode = ""             # 리턴할 변수
-    actualAdd = addChar % 25    # 25 이상의 숫자가 넘어왔을 때를 대비
+    actualAdd = addChar % 26    # 25 이상의 숫자가 넘어왔을 때를 대비
     subAdd = 0                  # z, Z가 넘어갔을 때 추가적으로 더할 값
     nTemp = 0                   # 아스키코드 값을 임시적으로 저장
     listCode = list(sCode)      # 입력받은 문자열을 배열에 저장
