@@ -5,9 +5,10 @@
 m = 0; n = int(input())
 for i in range(n):
     l = []
-    for i in input():
-        if i not in l:
-            l.append(i)
-        elif l[len(l)-1] != i:
+    for j in input():
+        if j not in l:
+            l.append(j)
+        elif l[len(l)-1] != j:
             m+=1
+            break
 print(n-m)
