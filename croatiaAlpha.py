@@ -2,12 +2,19 @@
 # 날짜 : 12 19 2017
 # 주제 : 문자열에서 몇개의 크로아티아 알파벳이 있는지 확인
 
-croatiaAlphabet = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
-s = input(); n = 0
-for i in croatiaAlphabet:
-    if i in s:
-        n += s.count(i); s = s.replace(i, '')
-print(n + len(s))
+# croatiaAlphabet = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+# s = input(); n = 0
+# for i in croatiaAlphabet:
+#     if i in s:
+#         n += s.count(i); s = s.replace(i, '')
+# print(n + len(s))
+
+l = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+s = input(); n = len(s)
+for i in l:
+    n -= s.count(i)
+print(n)
+
 
 # 리스트 컴프리헨션
 # l = list(filter(lambda x: x in s, croatiaAlphabet))
