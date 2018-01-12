@@ -14,15 +14,23 @@
 #
 # [print(is_pair(input())) for _ in range(int(input()))]
 
+# for _ in range(int(input())):
+#     returnBool = True
+#     openNum = 0; closeNum = 0; s = input()
+#     for i in s:
+#         if i == "(":
+#             if not returnBool: break
+#             openNum += 1
+#         elif i == ")":
+#             closeNum += 1
+#             returnBool = openNum == closeNum
+#         else:
+#             returnBool = False
+#             break
+#     print("YES") if returnBool else print("NO")
+
+
 for _ in range(int(input())):
-    returnBool = False
-    openNum = 0; closeNum = 0; s = input()
-    for i in s:
-        if i == "(": openNum += 1
-        elif i == ")":
-            closeNum += 1
-            returnBool = openNum == closeNum
-        else:
-            returnBool = False
-            break
-    print("YES") if returnBool else print("NO")
+    s = input()
+    while s.count("()"): s = s.replace("()", "")
+    print("NO" if s else "YES")
